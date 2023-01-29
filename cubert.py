@@ -29,5 +29,19 @@ def perm_cycle(cube,a,b,c,d):
     cube[b[0]*9+b[1]]=p_a
     cube[c[0]*9+c[1]]=p_b
     cube[d[0]*9+d[1]]=p_c
-    return cube
 
+
+def w_move(cube,direction):
+    f=0 #face
+    a=[4,3,2,1] #adjacents
+    #direction=0 or 1 (Cw/ccw)
+    if(direction==0):
+        perm_cycle(cube,(f,0),(f,2),(f,8),(f,6))
+        perm_cycle(cube,(f,1),(f,5),(f,7),(f,3))
+        perm_cycle(cube,(a[0],0),(a[1],0),(a[2],0),(a[3],0))
+        perm_cycle(cube,(a[0],1),(a[1],1),(a[2],1),(a[3],1))
+        perm_cycle(cube,(a[0],2),(a[1],2),(a[2],2),(a[3],2))
+        
+w_move(cube,0)
+print()
+print_cube(cube)
