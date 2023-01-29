@@ -25,8 +25,9 @@ def perm_cycle(cube,a,b,c,d):
     p_c=cube[c[0]*9+c[1]]
     p_d=cube[d[0]*9+d[1]]
     #copy to next location
-    cube[a[0]*9+a[1]]=p_a
-    cube[b[0]*9+b[1]]=p_b
-    cube[c[0]*9+c[1]]=p_c
-    cube[d[0]*9+d[1]]=p_d
-    
+    cube[a[0]*9+a[1]]=p_d
+    cube[b[0]*9+b[1]]=p_a
+    cube[c[0]*9+c[1]]=p_b
+    cube[d[0]*9+d[1]]=p_c
+    return cube
+
