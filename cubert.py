@@ -16,8 +16,7 @@ def print_cube(cube):
         else:
             print("}}")
     
-    
-print_cube(cube)
+
 
 def perm_cycle(cube,a,b,c,d):
     p_a=cube[a[0]*9+a[1]]
@@ -134,14 +133,45 @@ def y_move(cube,direction):
         perm_cycle(cube,(a[3],7),(a[2],7),(a[1],7),(a[0],7))
         perm_cycle(cube,(a[3],8),(a[2],8),(a[1],8),(a[0],8))
 
-moves=[w_move,o_move,g_move,r_move,b_move,y_move]
-print()
+def main():
+    moves=[w_move,o_move,g_move,r_move,b_move,y_move]
 
-for f in moves:
-    print(f.__name__)
-    f(cube,0)
-    print_cube(cube)
-    f(cube,1)
-    print()
-    print_cube(cube)
-    print()
+    #user input
+    
+    while True:
+        command = input("Enter your command(s): ")
+        if command == "exit":
+            break
+
+        i = 0
+        while i < len(command):
+            current = command[i]
+            if i+1 < len(command) and command[i+1] == "'":
+                dir = 1
+                i = i+2
+            else:
+                dir = 0
+                i = i+1
+
+            if current == 'w':
+                move_idx = 0
+            elif current == 'o':
+                move_idx = 1
+            elif current == 'g':
+                move_idx = 2
+            elif current == 'r':
+                move_idx = 3
+            elif current == 'b':
+                move_idx = 4
+            elif current == 'y':
+                move_idx = 5
+            
+            moves[move_idx](cube, dir)
+
+        print_cube(cube)
+
+# program exits
+        
+            
+if __name__ == "__main__":
+    main()
