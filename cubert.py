@@ -31,7 +31,6 @@ def perm_cycle(cube,a,b,c,d):
     cube[d[0]*9+d[1]]=p_c
 
 
-
 def w_move(cube,direction):
     f=0 #face
     a=[4,3,2,1] #adjacents
