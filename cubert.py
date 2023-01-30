@@ -82,6 +82,7 @@ def g_move(cube,direction):
         perm_cycle(cube,(a[3],5),(a[2],1),(a[1],3),(a[0],8))
         perm_cycle(cube,(a[3],2),(a[2],0),(a[1],6),(a[0],9))
 
+
 def r_move(cube,direction):
     f=3 #face
     a=[0, 4, 5, 2] #adjacents
