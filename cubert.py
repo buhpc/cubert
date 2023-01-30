@@ -96,7 +96,7 @@ def r_move(cube,direction):
     elif(direction==1):
         perm_cycle(cube,(f,0),(f,6),(f,8),(f,2))
         perm_cycle(cube,(f,1),(f,3),(f,7),(f,5))
-        perm_cycle(cube,(a[3],8),(a[2],8),(a[1],2),(a[0],8))
+        perm_cycle(cube,(a[3],8),(a[2],8),(a[1],0),(a[0],8))
         perm_cycle(cube,(a[3],5),(a[2],5),(a[1],3),(a[0],5))
         perm_cycle(cube,(a[3],2),(a[2],2),(a[1],6),(a[0],2))
 
@@ -134,9 +134,14 @@ def y_move(cube,direction):
         perm_cycle(cube,(a[3],7),(a[2],7),(a[1],7),(a[0],7))
         perm_cycle(cube,(a[3],8),(a[2],8),(a[1],8),(a[0],8))
 
-w_move(cube,0)
+moves=[w_move,o_move,g_move,r_move,b_move,y_move]
 print()
-print_cube(cube)
-w_move(cube,1)
-print()
-print_cube(cube)
+
+for f in moves:
+    print(f.__name__)
+    f(cube,0)
+    print_cube(cube)
+    f(cube,1)
+    print()
+    print_cube(cube)
+    print()
