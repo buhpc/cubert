@@ -131,9 +131,15 @@ class cubert:
             if i+1 < len(command) and command[i+1] == "'":
                 dir = 1
                 i = i+2
+                times=1
+            elif i+1 < len(command) and command[i+1] == "2":
+                dir=0
+                i = i+2
+                times=2
             else:
                 dir = 0
                 i = i+1
+                times=1
 
             if current == 'w':
                 move_idx = 0
@@ -147,8 +153,9 @@ class cubert:
                 move_idx = 4
             elif current == 'y':
                 move_idx = 5
-            
-            self.moves[move_idx](dir)
+                
+            for j in range(times):
+                self.moves[move_idx](dir)
     
     def __init__(self,seed):
         self.cube=['w']*9+['o']*9+['g']*9+['r']*9+['b']*9+['y']*9
