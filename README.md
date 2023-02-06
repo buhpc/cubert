@@ -38,7 +38,7 @@ Enter your command(s): r
 {yyyrrorro},
 {rggwbbwbb},
 {robyybyyg}}
-Enter your command(s): r'gw2
+Enter your command(s): r'gww
 {{wwwwwwwww},
 {ooooooooo},
 {ggggggggg},
