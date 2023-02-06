@@ -20,6 +20,9 @@ endif
 #once you add a program that includes "Cubert.hpp", add it 
 # to the programs list separated by a space
 programs = main test
+
+
+#auto find correspeonding .cpp and .o files
 cpp_files = $(programs:=.cpp) Cubert.cpp
 o_files=$(programs:=.o) Cubert.o
 
