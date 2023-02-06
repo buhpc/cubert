@@ -17,9 +17,6 @@ def main():
         
         cube.run_moves(command)
         cube.print_cube()
-
-# program exits
-        
             
 if __name__ == "__main__":
     main()
