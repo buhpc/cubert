@@ -157,7 +157,7 @@ class cubert:
             for j in range(times):
                 self.moves[move_idx](dir)
     
-    def __init__(self,seed):
+    def __init__(self,seed=""):
         self.cube=['w']*9+['o']*9+['g']*9+['r']*9+['b']*9+['y']*9
         self.moves=[self.w_move,self.o_move,self.g_move,self.r_move,self.b_move,self.y_move]
         
