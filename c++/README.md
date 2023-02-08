@@ -12,6 +12,7 @@ make
 g++ main.cpp Cubert.cpp -o main
 ```
 
-Then, run it with `./main [optional seed]` and the output will be the same as before
+Then, run it with `./main "[optional seed]"` and the output will be the same as before
+eg. `./main "w2g'r2w'"`
 
 Following the example of main.cpp, and the incoherent example of test.cpp, you can make your own main program using the Cubert library, so you don't even have to deal with the command line. This is useful if you intend to do a graph-like exploration, and would like to save a copy of the current cube state, or explore multiple directions at once. you simply need to include `#include "Cubert.hpp"` at the top of your file, and compile it as shown above for `main`, or modify the makefile accordingly.
