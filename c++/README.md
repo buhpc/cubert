@@ -9,7 +9,7 @@ make
 ```
  (if make is installed on your system), or compile it with
 ```
-g++ main.cp Cubert.cpp -o main
+g++ main.cpp Cubert.cpp -o main
 ```
 
 Then, run it with `./main [optional seed]` and the output will be the same as before
