@@ -31,6 +31,9 @@ exe_files=$(programs:=.exe)
 
 all: $(programs)
 
+run: main
+	./main
+
 .PHONY: clean
 .SECONDARY: $(o_files)
 
