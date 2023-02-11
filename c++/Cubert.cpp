@@ -62,16 +62,16 @@ void Cubert::g_move(int direction) {
     if (direction == 0) {
         perm_cycle({f, 0}, {f, 2}, {f, 8}, {f, 6});
         perm_cycle({f, 1}, {f, 5}, {f, 7}, {f, 3});
-        perm_cycle({a[0], 7}, {a[1], 0}, {a[2], 2}, {a[3], 8});
-        perm_cycle({a[0], 8}, {a[1], 3}, {a[2], 1}, {a[3], 5});
-        perm_cycle({a[0], 9}, {a[1], 6}, {a[2], 0}, {a[3], 2});
+        perm_cycle({a[0], 6}, {a[1], 0}, {a[2], 2}, {a[3], 8});
+        perm_cycle({a[0], 7}, {a[1], 3}, {a[2], 1}, {a[3], 5});
+        perm_cycle({a[0], 8}, {a[1], 6}, {a[2], 0}, {a[3], 2});
     }
     if (direction == 1) {
         perm_cycle({f, 6}, {f, 8}, {f, 2}, {f, 0});
         perm_cycle({f, 3}, {f, 7}, {f, 5}, {f, 1});
-        perm_cycle({a[3], 8}, {a[2], 2}, {a[1], 0}, {a[0], 7});
-        perm_cycle({a[3], 5}, {a[2], 1}, {a[1], 3}, {a[0], 8});
-        perm_cycle({a[3], 2}, {a[2], 0}, {a[1], 6}, {a[0], 9});
+        perm_cycle({a[3], 8}, {a[2], 2}, {a[1], 0}, {a[0], 6});
+        perm_cycle({a[3], 5}, {a[2], 1}, {a[1], 3}, {a[0], 7});
+        perm_cycle({a[3], 2}, {a[2], 0}, {a[1], 6}, {a[0], 8});
     }
 }
 

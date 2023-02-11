@@ -62,15 +62,15 @@ class cubert:
         if(direction==0):
             self.__perm_cycle((f,0),(f,2),(f,8),(f,6))
             self.__perm_cycle((f,1),(f,5),(f,7),(f,3))
-            self.__perm_cycle((a[0],7),(a[1],0),(a[2],2),(a[3],8))
-            self.__perm_cycle((a[0],8),(a[1],3),(a[2],1),(a[3],5))
-            self.__perm_cycle((a[0],9),(a[1],6),(a[2],0),(a[3],2))
+            self.__perm_cycle((a[0],6),(a[1],0),(a[2],2),(a[3],8))
+            self.__perm_cycle((a[0],7),(a[1],3),(a[2],1),(a[3],5))
+            self.__perm_cycle((a[0],8),(a[1],6),(a[2],0),(a[3],2))
         if(direction==1):
             self.__perm_cycle((f,6),(f,8),(f,2),(f,0))
             self.__perm_cycle((f,3),(f,7),(f,5),(f,1))
-            self.__perm_cycle((a[3],8),(a[2],2),(a[1],0),(a[0],7))
-            self.__perm_cycle((a[3],5),(a[2],1),(a[1],3),(a[0],8))
-            self.__perm_cycle((a[3],2),(a[2],0),(a[1],6),(a[0],9))
+            self.__perm_cycle((a[3],8),(a[2],2),(a[1],0),(a[0],6))
+            self.__perm_cycle((a[3],5),(a[2],1),(a[1],3),(a[0],7))
+            self.__perm_cycle((a[3],2),(a[2],0),(a[1],6),(a[0],8))
 
 
     def r_move(self,direction):
